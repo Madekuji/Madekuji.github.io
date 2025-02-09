@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+@font-face {
+  font-family: Metropolis;
+  src: url(fonts/Metropolis-Regular.woff2);
+  font-weight: 400;
+  }
+  @font-face {
+  font-family: Metropolis;
+  src: url(fonts/Metropolis-Bold.woff2);
+  font-weight: 700;
+  }
+.material-symbols-outlined {
+  font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+}
+body{
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("assets/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  font-family: 'Cabin', sans-serif;
+}
+#bodyDiv{
+  /*height: 80vh;*/
+  width: 100vw;
+}
+#hero {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem
+}
+#navbar {
+  position: sticky;
+  top: 0;
+}
+#navbarContent {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  font-size: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#navbarBG {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  backdrop-filter: none;
+  transition: opacity 0.4s, backdrop-filter 0.4s;
+  background: linear-gradient(to bottom, rgba(0, 68, 164, 0.5), rgba(0, 27, 64, 0.2));
+}
+.nav-colored{
+  opacity: 1 !important;
+  backdrop-filter: blur(8px) !important;
+}
+.nav-transparent{
+  opacity: 0 !important;
+  backdrop-filter: none !important;
+}
+#navbarNav {
+  display: flex;
+  gap: 1rem;
+}
+#typer {
+  font-size: 5rem;
+  text-align: center;
+  font-family: 'Metropolis', sans-serif;
+}
+nav a{
+  text-decoration: none;
+  transition: 0.3s;
+  color: white;
+}
+nav a:visited { 
+  text-decoration: none; 
+  color: white; 
+ }
+nav a:hover{
+  color: #0079FF;
+  font-weight: 700;
+}
+#projectList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  align-items: center;
+}
+#projectList a{
+  width: 70%;
+}
+#projectList a.visited{
+  text-decoration: none; 
+  color: white; 
+}
+.projectCard{
+  background-image: linear-gradient(to bottom right, rgba(0,68,164,0.5), rgba(0,27,64,0.5));
+  display: flex;
+  padding: 2rem;
+  color:white;
+  border-radius: 1rem;
+  gap: 1rem;
+}
+.projectCardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.projectCardInfo h2 {
+  margin: 0;
+}
+.projectCardInfo p {
+  margin: 0;
+}
+.heroShelf {
+  background-image: linear-gradient(to bottom right, rgba(0,68,164,0.5), rgba(0,27,64,0.5));
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  color:white;
+  border-radius: 1rem;
+}
+.imgShelf {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.shelfTitleText {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.shelfTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.heroShelf a{
+  text-decoration: none;
+  transition: 0.3s;
+  color: white;
+}
+.heroShelf a:visited {
+  text-decoration: none;
+  color: white;
+}
+.heroShelf a:hover{
+  color: #0079FF;
+  font-weight: 700;
+}
+#heroTextContainer{
+  height: 20rem;
+}
+
+@media only screen and (max-width: 600px) {
+  #heroTextContainer{
+    height: 15rem;
+  }
+  #typer {
+    font-size: 3rem;
+  }
+  #navbar {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
