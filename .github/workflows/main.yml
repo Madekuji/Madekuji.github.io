@@ -49,6 +49,11 @@ jobs:
         with:
           deno-version: v2.x
 
+      - name: Install dependencies
+        env: 
+          DENO_DIR: .deno
+        run: deno install
+        
       - name: Build production
         env: 
           DENO_DIR: .deno
