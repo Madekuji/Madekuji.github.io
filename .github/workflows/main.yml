@@ -30,15 +30,29 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Set up Node
-        uses: actions/setup-node@v4
+      - name: Cache .deno/
+        id: cache-deno
+        uses: actions/cache@v3
         with:
-          node-version: 20
-          cache: 'npm'
-      - name: Install dependencies
-        run: npm ci --force
-      - name: Build
-        run: npm run build
+          path: .deno/
+          key: ${{ runner.os }}-deno
+      
+      - name: Cache node_modules/
+        id: cache-node-modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-node-modules
+
+      - name: Install Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Build production
+        env: 
+          DENO_DIR: .deno
+        run: deno task build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
