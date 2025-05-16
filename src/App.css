@@ -67,6 +67,7 @@ body{
 }
 .nav-colored{
   opacity: 1 !important;
+  -webkit-backdrop-filter: blur(8px) !important;
   backdrop-filter: blur(8px) !important;
 }
 .nav-transparent{
@@ -105,9 +106,9 @@ nav a:hover{
 }
 #projectList a{
   width: 70%;
+  text-decoration: none;
 }
 #projectList a.visited{
-  text-decoration: none; 
   color: white; 
 }
 .projectCard{
@@ -173,6 +174,12 @@ nav a:hover{
   height: 20rem;
 }
 
+@media only screen and (max-width: 1280px) {
+  #projectList a{
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   #heroTextContainer{
     height: 15rem;
@@ -183,5 +190,15 @@ nav a:hover{
   #navbar {
     justify-content: center;
     gap: 1rem;
+  }
+  #navbarContent {
+    justify-content: center;
+    gap: 1rem;
+  }
+  #navbarLogoImg {
+    width: 100%;
+  }
+  .projectCard {
+    flex-direction: column;
   }
 }

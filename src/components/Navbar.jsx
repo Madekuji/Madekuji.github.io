@@ -24,7 +24,7 @@ function Navbar() {
             <div id="navbarBG"/>
             <div id="navbarContent">
                 <div id="navbarLogo">
-                    <Link to="/"><img src="img/logo.png"></img></Link>
+                    <Link to="/"><img id="navbarLogoImg" src="img/logo.png"></img></Link>
                 </div>
                 <nav id="navbarNav">
                     <Link to="/">Home</Link>
