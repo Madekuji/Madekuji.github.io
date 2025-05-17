@@ -13,6 +13,8 @@ function Layout() {
                   <Outlet />
               </Suspense>
           </div>
+          <img id="bg_logo" src="/img/bg_logo.svg" alt="bg_logo"/>
+          <img id="bg" src="/img/bg_blank.webp" alt="BG"/>
       </>
   )
 }

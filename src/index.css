@@ -1,0 +1,26 @@
+:root {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+html {
+    background: #000000 url("assets/bg_blank.webp") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+@media screen and (max-width: 600px) {
+    html {
+        background: #000000;
+    }
+}
+/*
+@supports (-webkit-touch-callout: none) {
+    @media screen and (max-width: 600px) {
+        html {
+            background: #000000;
+        }
+    }
+}*/

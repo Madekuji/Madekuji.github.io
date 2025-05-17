@@ -20,16 +20,41 @@ body{
   margin: 0;
   height: 100vh;
   width: 100vw;
-  background-image: url("assets/bg.png");
+/*  background-image: url("assets/bg.png");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed;*/
   color: white;
   font-family: 'Cabin', sans-serif;
+}
+#bg {
+  display: none;
 }
 #bodyDiv{
   /*height: 80vh;*/
   width: 100vw;
+}
+#bg_chara {
+  opacity: 75%;
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  left: -5rem;
+  height: 95%;
+  mix-blend-mode: screen;
+  z-index: -1;
+}
+#bg_logo {
+  opacity: 75%;
+  position: fixed;
+  bottom: -3rem;
+  margin: 0;
+  padding: 0;
+  right: -3rem;
+  height: 85%;
+  mix-blend-mode: overlay;
+  z-index: -2;
 }
 #hero {
   height: 100%;
@@ -68,6 +93,7 @@ body{
 }
 .nav-colored{
   opacity: 1 !important;
+  mask: linear-gradient(black, black, transparent);
   -webkit-backdrop-filter: blur(8px) !important;
   backdrop-filter: blur(8px) !important;
 }
@@ -80,6 +106,7 @@ body{
   gap: 1rem;
 }
 .Typewriter {
+  text-shadow: 0 2px 12px #000000;
   font-size: 5rem;
   text-align: center;
   font-family: 'Metropolis', sans-serif;
@@ -113,13 +140,29 @@ nav a:hover{
 #projectList a.visited{
   color: white; 
 }
+@property --myColor1 {
+  syntax: '<color>';
+  initial-value: #0044A47F;
+  inherits: false;
+}
+
+@property --myColor2 {
+  syntax: '<color>';
+  initial-value: #001B407F;
+  inherits: false;
+}
 .projectCard{
-  background-image: linear-gradient(to bottom right, rgba(0,68,164,0.5), rgba(0,27,64,0.5));
+  background-image: linear-gradient(to bottom right, var(--myColor1), var(--myColor2));
   display: flex;
   padding: 2rem;
   color:white;
   border-radius: 1rem;
   gap: 1rem;
+  transition: --myColor1 0.3s, --myColor2 0.3s;
+}
+.projectCard:hover {
+  --myColor1: #0044A4FF;
+  --myColor2: #001B40FF;
 }
 .projectCardInfo {
   display: flex;
@@ -185,7 +228,46 @@ nav a:hover{
   }
 }
 
+/* iOS Safari modifications */
+/*@supports (-webkit-touch-callout: none) {
+  @media screen and (max-width: 600px) {
+    #bg {
+      display: block;
+      z-index: -3;
+      height: 100vh;
+      top: 0;
+      position: fixed;
+      left: 50%;
+      transform: translate(-50%, 0%);
+    }
+  }
+}*/
+
 @media only screen and (max-width: 600px) {
+  #bg {
+    display: block;
+    z-index: -3;
+    height: 100vh;
+    top: 0;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+  #bg_chara {
+    width: auto;
+    height: 90vh;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+  #bg_logo {
+    width: 110%;
+    max-width: 40rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+  #navbarContent {
+    padding-bottom: 2rem;
+  }
   #heroTextContainer{
     height: 15rem;
   }
