@@ -1,11 +1,11 @@
 {
-  "name": "mdkj-web",
+  "name": "mdkj-web-ssg-ts",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "vite-react-ssg dev",
+    "build": "tsc -b && vite-react-ssg build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -14,7 +14,8 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.27.0",
     "react-transition-group": "^4.4.5",
-    "typeit-react": "^2.7.3"
+    "typewriter-effect": "^2.22.0",
+    "vite-react-ssg": "^0.8.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
@@ -22,10 +23,11 @@
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.3",
     "eslint": "^9.13.0",
-    "eslint-plugin-react": "^7.37.1",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.13",
     "globals": "^15.11.0",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.10.0",
     "vite": "^5.4.9"
   }
 }
