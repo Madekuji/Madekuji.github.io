@@ -1,4 +1,4 @@
-function ProjectCard(props){
+function ProjectCard(props: { link: string; img: string; name: string; description: string | TrustedHTML}) {
     return(
         <a href={`${props.link}`}>
             <div className="projectCard">

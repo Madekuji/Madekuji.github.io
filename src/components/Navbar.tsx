@@ -3,17 +3,19 @@ import {useEffect} from "react";
 
 function navbarScroll() {
     const nav = document.getElementById('navbarBG');
-    window.onscroll = function () {
-        //console.log(scrollY);
-        if (scrollY >= 100 ) {
-            nav.classList.add("nav-colored");
-            nav.classList.remove("nav-transparent");
-        }
-        else {
-            nav.classList.add("nav-transparent");
-            nav.classList.remove("nav-colored");
-        }
-    };
+    if (nav !== null) {
+        window.onscroll = function () {
+            //console.log(scrollY);
+            if (scrollY >= 100 ) {
+                nav.classList.add("nav-colored");
+                nav.classList.remove("nav-transparent");
+            }
+            else {
+                nav.classList.add("nav-transparent");
+                nav.classList.remove("nav-colored");
+            }
+        };
+    }
 }
 function Navbar() {
     useEffect(() => {
