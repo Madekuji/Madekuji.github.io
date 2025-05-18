@@ -80,6 +80,9 @@ body{
   justify-content: space-between;
   align-items: center;
 }
+#navbarLogoImg {
+  height: 3rem;
+}
 #navbarBG {
   z-index: 1;
   position: absolute;
