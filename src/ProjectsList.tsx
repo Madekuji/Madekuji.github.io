@@ -18,7 +18,7 @@ Submitted for the Kazamatsuri Winter Festival.`,
         description: `Visualizer for the race for top spot of the Kazamatsuri Winter Festival.\n
 Built with Google Charts and Google Sheets.`,
         img: "kazaorbs.png",
-        link: "https://youtu.be/7syiUR4jxYI"
+        link: "https://mdkj.dev/kaza-light-orbs-2018/"
     },
     {
         name: "HoloCalcu",
