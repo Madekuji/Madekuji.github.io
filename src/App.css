@@ -161,7 +161,7 @@ nav a:hover{
   color:white;
   border-radius: 1rem;
   gap: 1rem;
-  transition: --myColor1 0.3s, --myColor2 0.3s;
+  transition: --myColor1 0.2s, --myColor2 0.2s;
 }
 .projectCard:hover {
   --myColor1: #0044A4FF;
@@ -223,6 +223,43 @@ nav a:hover{
   flex-direction: column;
   justify-content: center;
   height: 20rem;
+}
+
+.aboutPage {
+  display: flex;
+  justify-content: center;
+}
+
+.aboutBox {
+  background-image: linear-gradient(to bottom right, rgba(0,68,164,0.5), rgba(0,27,64,0.5));
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 2rem;
+  color: white;
+  border-radius: 1rem;
+  width: 70%;
+}
+.aboutBox hr {
+  width: 7rem;
+  margin: 2rem auto;
+  color: white;
+  opacity: 50%;
+  height: 0.2rem;
+  border-radius: 0.2rem;
+  background-color: white;
+}
+.aboutBox p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.aboutBox h2 {
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+.aboutBox h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -291,5 +328,9 @@ nav a:hover{
   }
   .projectCard {
     flex-direction: column;
+  }
+  .aboutBox {
+    width: auto;
+    margin: 0;
   }
 }
