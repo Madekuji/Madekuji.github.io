@@ -19,7 +19,7 @@ function About(){
                     …and I'm now also a VTuber myself, I guess. It wasn't always like that though!
                 </p>
                 <p>
-                    I've been making YouTube videos since I was a kid and started doing live streams in high school. I've always shared my voice if it meant sharing the things I like, or if it meant helping people learn something new.
+                    I've been making YouTube videos and doing live streams as a hobby for a long time, ever since I was younger. I've always shared my voice if it meant sharing the things I like, or if it meant helping people learn something new.
                 </p>
                 <p>
                     Since then up to now, I always want to keep making things I like; not just for myself, but in the service of others! Whenever people become happy from the things I do, it makes me happy too!
