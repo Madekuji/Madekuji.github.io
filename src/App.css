@@ -1,14 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
 @font-face {
   font-family: Metropolis;
   src: url(fonts/Metropolis-Regular.woff2);
   font-weight: 400;
   }
-  @font-face {
+@font-face {
   font-family: Metropolis;
   src: url(fonts/Metropolis-Bold.woff2);
   font-weight: 700;
   }
+@font-face {
+  font-family: Cabin;
+  src: url('fonts/Cabin.woff2') format('woff2');
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Cabin;
+  src: url('fonts/Cabin-Italic.woff2') format('woff2');
+  font-style: italic;
+  font-display: swap;
+}
 .material-symbols-outlined {
   font-variation-settings:
           'FILL' 0,
@@ -26,6 +37,7 @@ body{
   background-attachment: fixed;*/
   color: white;
   font-family: 'Cabin', sans-serif;
+  font-weight: 100;
 }
 #bg {
   display: none;
@@ -91,12 +103,12 @@ body{
   height: 100%;
   opacity: 0;
   backdrop-filter: none;
+  mask: linear-gradient(black, black, transparent) !important;
   transition: opacity 0.4s, backdrop-filter 0.4s;
   background: linear-gradient(to bottom, rgba(0, 68, 164, 0.5), rgba(0, 27, 64, 0.2));
 }
 .nav-colored{
   opacity: 1 !important;
-  mask: linear-gradient(black, black, transparent);
   -webkit-backdrop-filter: blur(8px) !important;
   backdrop-filter: blur(8px) !important;
 }
@@ -252,6 +264,12 @@ nav a:hover{
 .aboutBox p {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  -moz-font-feature-settings:"ss01" 1;
+  -ms-font-feature-settings:"ss01" 1;
+  -o-font-feature-settings:"ss01" 1;
+  -webkit-font-feature-settings:"ss01" 1;
+  font-feature-settings:"ss01" 1;
+  font-size: 1.1rem;
 }
 .aboutBox h2 {
   margin-top: 0.5rem;
@@ -260,6 +278,16 @@ nav a:hover{
 .aboutBox h3 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+.aboutBox a {
+  transition: 0.3s;
+  color: white;
+}
+.aboutBox a:visited {
+  color: white;
+}
+.aboutBox a:hover {
+  color: #0079FF;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -302,6 +330,7 @@ nav a:hover{
   #bg_logo {
     width: 110%;
     max-width: 40rem;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%, 0%);
   }
@@ -332,5 +361,8 @@ nav a:hover{
   .aboutBox {
     width: auto;
     margin: 0;
+  }
+  .aboutBox p {
+    font-size: 1rem;
   }
 }

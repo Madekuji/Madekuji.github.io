@@ -22,7 +22,7 @@ function About(){
                     I've been making YouTube videos and doing live streams as a hobby for a long time, ever since I was younger. I've always shared my voice if it meant sharing the things I like, or if it meant helping people learn something new.
                 </p>
                 <p>
-                    Since then up to now, I always want to keep making things I like; not just for myself, but in the service of others! Whenever people become happy from the things I do, it makes me happy too!
+                    Since then up to now, I always want to keep making things I like; not just for myself, but in the service of others!<br /><a href="https://www.youtube.com/watch?v=V2RWxi-JVYI" target="_blank">Whenever people become happy from the things I do, it makes me happy too!</a>
                 </p>
                 <p>
                     I’m first and foremost a fan, and a huge chunk of what I do comes from the inspiration given to me by the things I like. It's from them I source my aspirations and creativity.
@@ -37,11 +37,11 @@ function About(){
                 <p>
                     I currently work (in a volunteer capacity) as:
                     <ul>
-                        <li>Co-manager and Team Lead for Subtitles at HoloResort Translations (formerly Hololive Resort Subs)</li>
-                        <li>UI/UX Designer at Holodex</li>
-                        <li>Field Reporter and Manila TOC Broadcast Director at VTuber NewsDrop</li>
-                        <li>Cast Member (Event Staff) at Moomin’ Manila</li>
-                        <li>Head of Promotions, Production Member, Technical Staff, and Brand Designer at HoloPro Fans PH</li>
+                        <li>Co-manager and Team Lead for Subtitles at <a href="https://holoresorttls.carrd.co" target="_blank">HoloResort Translations</a> (formerly Hololive Resort Subs)</li>
+                        <li>UI/UX Designer at <a href="https://holodex.net" target="_blank">Holodex</a></li>
+                        <li>Field Reporter and Manila TOC Broadcast Director at <a href="https://vtubernewsdrop.com" target="_blank">VTuber NewsDrop</a></li>
+                        <li>Cast Member (Event Staff) at <a href="https://moominworldwide.org" target="_blank">Moomin’ Manila</a></li>
+                        <li>Head of Promotions, Production Member, Technical Staff, and Brand Designer at <a href="https://holoprofansph.org" target="_blank">HoloPro Fans PH</a></li>
                     </ul>
                 </p>
                 <p>
