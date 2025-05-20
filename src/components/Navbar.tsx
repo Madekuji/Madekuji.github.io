@@ -29,11 +29,11 @@ function Navbar() {
                     <Link to="/"><img id="navbarLogoImg" src="img/logo.webp"></img></Link>
                 </div>
                 <nav id="navbarNav">
-                    <Link to="/">Home</Link>
+                    <Link to="/"><span className="material-symbols-outlined">home</span> Home</Link>
                     <span>  |  </span>
-                    <Link to="/work">Work</Link>
+                    <Link to="/work"><span className="material-symbols-outlined">work</span> Work</Link>
                     <span>  |  </span>
-                    <Link to="/about">About</Link>
+                    <Link to="/about"><span className="material-symbols-outlined">info</span> About</Link>
                 </nav>
             </div>
 

@@ -52,30 +52,46 @@ Built with Notion, Fruition, and Cloudflare Workers.`,
     {
         name: "Hardsub Code",
         description: `Web GUI for making basic FFmpeg hardsub commands.
-Built with Bootstrap and JavaScript`,
+Built with Bootstrap and JavaScript.`,
         img: "hscode.png",
         link: "https://mdkj.dev/hardsubcode/"
     },
     {
         name: "VTuber Dictionary",
         description: `Online dictionary for slang and terms within the VTuber community.
-Built with Jekyll`,
+Built with Jekyll.`,
         img: "vtdictionary.png",
         link: "https://vtd.mdkj.dev/"
     },
     {
         name: "Responsive Border",
         description: `Text border resizing caluclator.
-Built with Bootstrap and JavaScript`,
+Built with Bootstrap and JavaScript.`,
         img: "responsiveborder.png",
         link: "https://mdkj.dev/responsiveborder/"
     },
     {
         name: "osu!sensitivity",
         description: `Mouse sensitivity to tablet area calculator for osu! players.
-Built with Bootstrap and JavaScript`,
+Built with Bootstrap and JavaScript.`,
         img: "osusens.png",
         link: "https://mdkj.dev/osu-sensitivity/"
+    },
+    {
+        name: "Beyond the Storm",
+        description: `I developed the stream overlay setup and some of the branding for this hololive production fan-organized charity stream.
+        Built with HTMX and NodeJS.`,
+        img: "bts.png",
+        link: "https://youtu.be/dFnsuIsMJik"
+    },
+    {
+        name: "Moomin' Worldwide",
+        description: `I developed the website and automations for the Moomin' Worldwide fan project for Nanashi Mumei.
+        Website built with the Debiru stack (Deno + Vite + React + TypeScript).
+        Server built with Deno.
+        Automations built with n8n.`,
+        img: "moomin.png",
+        link: "https://moominworldwide.org"
     },
 ]
 

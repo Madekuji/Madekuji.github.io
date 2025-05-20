@@ -1,6 +1,6 @@
 function ProjectCard(props: { link: string; img: string; name: string; description: string | TrustedHTML}) {
     return(
-        <a href={`${props.link}`}>
+        <a href={`${props.link}`} target="_blank">
             <div className="projectCard">
                 <div>
                     <img src={`img/projects/${props.img}`}></img>
