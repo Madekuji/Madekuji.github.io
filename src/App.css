@@ -125,6 +125,8 @@ body{
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  width: 6rem;
+  justify-content: center;
 }
 .Typewriter {
   text-shadow: 0 2px 12px #000000;
