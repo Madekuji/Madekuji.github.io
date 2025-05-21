@@ -149,9 +149,6 @@ function Index() {
                     {socmed.map(spawnSocmedImg)}
                 </div>
             </div>
-            <span className="material-symbols-outlined">
-info
-</span>
             <img id="bg_chara" src="/img/bg_chara.webp" alt="bg_chara"/>
         </div>
     );
