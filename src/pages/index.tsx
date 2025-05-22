@@ -9,10 +9,10 @@ const typer = typers[0];*/
 
 
 function spawnProjectImg(item: { link: string; name: string; img: string; }) {
-    return (<a href={`${item.link}`} key={item.name}><img src={`img/projects/${item.img}`}></img></a>);
+    return (<a href={`${item.link}`} key={item.name} target="_blank"><img src={`img/projects/${item.img}`}></img></a>);
 }
 function spawnSocmedImg(item: { link: string; name: string; img: string; }) {
-    return (<a href={`${item.link}`} key={item.name}><img src={`img/socmed/${item.img}`}></img></a>);
+    return (<a href={`${item.link}`} key={item.name} target="_blank"><img src={`img/socmed/${item.img}`}></img></a>);
 }
 
 /*const myTypeItInstance = new TypeIt("globalThis.myElement", {

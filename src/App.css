@@ -148,6 +148,9 @@ nav a:hover{
   color: #0079FF;
   font-weight: 700;
 }
+nav a:active{
+  color: #0053b2;
+}
 nav a:hover span{
   font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
@@ -223,8 +226,28 @@ nav a:hover span{
   justify-content: center;
 }
 
+.imgShelf a {
+  width: 4rem;
+  height: 4rem;
+  transition: transform 0.1s, width 0.1s, filter 0.1s;
+  margin: auto;
+}
+
+.imgShelf a:hover {
+  width: 5rem;
+  height: 4rem;
+  transform: scale(1.25) translate(0, -0.5rem);
+}
+.imgShelf a:active {
+  filter: brightness(0.5);
+}
+
 .imgShelf img {
   border-radius: 0.5rem;
+  height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .shelfTitleText {

@@ -32,7 +32,7 @@ function About(){
                     What do you work on and where do you work for?
                 </h3>
                 <p>
-                    I stream on Twitch! I also make VTuber clips sometimes over at Masao T.
+                    I stream on Twitch! I also make VTuber clips sometimes over at <a href="https://youtube.com/@Masao_T" target="_blank">Masao T</a>.
                 </p>
                 <p>
                     I currently work (in a volunteer capacity) as:
@@ -42,6 +42,7 @@ function About(){
                         <li>Field Reporter and Manila TOC Broadcast Director at <a href="https://vtubernewsdrop.com" target="_blank">VTuber NewsDrop</a></li>
                         <li>Cast Member (Event Staff) at <a href="https://moominworldwide.org" target="_blank">Moomin’ Manila</a></li>
                         <li>Head of Promotions, Production Member, Technical Staff, and Brand Designer at <a href="https://holoprofansph.org" target="_blank">HoloPro Fans PH</a></li>
+                        <li>Administrator at <a href="https://facebook.com/SonicPHL">Sonic Philippines</a></li>
                     </ul>
                 </p>
                 <p>
