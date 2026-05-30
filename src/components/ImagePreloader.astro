@@ -2,6 +2,7 @@
 import projects from "../ProjectsList.tsx";
 ---
 <div id="imagePreloader">
+    <h2><i>.</i></h2>
     <img src="/img/projects/youtube.png" height="1" alt="YouTube"></img>
     {projects.map((item: any) => <img src={`/img/projects/${item.img}`} height="1" alt={item.name}></img>)}
 </div>

@@ -61,6 +61,10 @@ html {
     width: 1px;
     opacity: 0;
 }
+#imagePreloader h2 {
+    font-size: xx-small !important;
+    opacity: 0;
+}
 body{
     margin: 0;
     height: 100vh;
