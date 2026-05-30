@@ -1,0 +1,16 @@
+---
+import childProcess from "child_process";
+const d = new Date();
+const curr_date = d.getDate();
+const curr_month = d.getMonth() + 1; //Months are zero based
+const curr_year = d.getFullYear();
+// obtain Git commit hash
+const hash = childProcess
+    .execSync("git rev-parse --short HEAD")
+    .toString()
+    .trim();
+---
+<footer>
+    <span>Created by Madekuji Masamune</span>
+    <span><a href="https://github.com/Madekuji/Madekuji.github.io" target="_blank">Source Code</a> | Version <a href=`https://github.com/Madekuji/Madekuji.github.io/commit/${hash}` target="_blank">{curr_year}.{curr_month}{curr_date}.{hash}</a></span>
+</footer>
