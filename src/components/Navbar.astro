@@ -1,0 +1,34 @@
+---
+---
+<script>
+    document.addEventListener("astro:page-load", () => {
+    const nav = document.getElementById('navbarBG');
+    if (nav !== null) {
+        window.onscroll = function () {
+            //console.log(scrollY);
+            if (scrollY >= 100 ) {
+                nav.classList.add("nav-colored");
+                nav.classList.remove("nav-transparent");
+            }
+            else {
+                nav.classList.add("nav-transparent");
+                nav.classList.remove("nav-colored");
+            }
+        };
+    }});
+</script>
+<div id="navbar">
+    <div id="navbarBG"/>
+    <div id="navbarContent">
+        <div id="navbarLogo">
+            <a href="/"><img id="navbarLogoImg" src="/img/logo.webp" height="48" width="335" alt="Madekuji Masamune"></img></a>
+        </div>
+        <nav id="navbarNav">
+            <a href="/"><span class="material-symbols-outlined">home</span> Home</a>
+            <span>  |  </span>
+            <a href="/work"><span class="material-symbols-outlined">work</span> Work</a>
+            <span>  |  </span>
+            <a href="/about"><span class="material-symbols-outlined">info</span> About</a>
+        </nav>
+    </div>
+</div>

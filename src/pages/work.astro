@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import ProjectCard from "../components/ProjectCard.astro"
+import projects from "../ProjectsList.tsx";
+const projectsData = JSON.parse(JSON.stringify(projects))
+---
+<BaseLayout>
+    <div id="projectList">
+        <a href="https://www.youtube.com/playlist?list=PL78xXQFQ8DedgWMQoAS-g6Kx5ShubFH2O" target="_blank">
+            <div class="projectCard">
+                <div>
+                    <img src="/img/projects/youtube.png" alt="YouTube"></img>
+                </div>
+                <div class="projectCardInfo">
+                    <span class="projectCardHText">Playlist of subtitled videos I've worked on!</span>
+                    <p>My hardsubbed fansubs make use of Aegisub. For typesetting in YouTube closed captions, I use YTSubConverter.</p>
+                </div>
+
+            </div>
+        </a>
+        {projectsData.reverse().map((item: any) => <ProjectCard key={item.name} name={`${item.name}`} description={item.description} link={`${item.link}`} img={`${item.img}`} />)}
+    </div>
+</BaseLayout>

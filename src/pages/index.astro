@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import projects from "../ProjectsList.tsx";
+import socmed from "../SocmedList.tsx";
+---
+<BaseLayout>
+    <div id="hero">
+        <div id="heroTextContainer">
+            <h3 class="Typewriter" id="typer"></h3>
+            <script is:inline src="/core.js"></script>
+            <script>
+                // @ts-nocheck
+                //console.log("NEW SCRIPT");
+                document.addEventListener("astro:page-load", () => {
+                    //console.log("ASTRO PAGE LOAD");
+                function colorSelect()
+                {
+                    const typer = document.querySelector<HTMLElement>(".Typewriter");
+                    //console.log("color select!")
+                    if (typer !== null) {
+                        typer.style.backgroundColor = "#0865D3";
+                        typer.style.color = "white";
+                    }
+                    else {
+                        //console.log("TYPER IS NULL")
+                    }
+                }
+
+                function colorReset()
+                {
+                    const typer = document.querySelector<HTMLElement>(".Typewriter");
+                    if (typer !== null) {
+                        typer.style.backgroundColor = "transparent";
+                        typer.style.color = "white";
+                    }
+                }
+
+                function empty()
+                {
+                    const typer = document.querySelector<HTMLElement>(".Typewriter__wrapper");
+                    if (typer !== null) {
+                        typer.style.display = "none";
+                    }
+                }
+                function reset()
+                {
+                    const typer = document.querySelector<HTMLElement>(".Typewriter__wrapper");
+                    if (typer !== null) {
+                        typer.style.display = "inline";
+                    }
+                }
+                const typerDelay1 = 2000;
+                const typerDelay2 = 500;
+                const typerDelay3 = 500;
+
+                const app = document.getElementById('typer');
+                //let isNew = false;
+                const typewriter = new Typewriter(app, {
+                    loop: true,
+                    delay: 50,
+                    cursorClassName: "cursor",
+                    //devMode: true
+                });
+                document.addEventListener("astro:before-swap", () => {
+                    typewriter.stop();
+                    typewriter.state.elements.container = null;
+                }, {once: true})
+                    //isNew = true;
+                    typewriter.typeString('Otaku for others.')
+                        .pauseFor(typerDelay1).callFunction(() => {colorSelect();})
+                        .pauseFor(typerDelay2).callFunction(() => {colorReset();empty();})
+                        .deleteAll(1).pauseFor(typerDelay3).callFunction(() => {reset();})
+                        .typeString('Tech Support VTuber')
+                        .pauseFor(typerDelay1).callFunction(() => {colorSelect();})
+                        .pauseFor(typerDelay2).callFunction(() => {colorReset();empty();})
+                        .deleteAll(1).pauseFor(typerDelay3).callFunction(() => {reset();})
+                        .typeString('UI/UX Designer')
+                        .pauseFor(typerDelay1).callFunction(() => {colorSelect();})
+                        .pauseFor(typerDelay2).callFunction(() => {colorReset();empty();})
+                        .deleteAll(1).pauseFor(typerDelay3).callFunction(() => {reset();})
+                        .typeString('Web Developer')
+                        .pauseFor(typerDelay1).callFunction(() => {colorSelect();})
+                        .pauseFor(typerDelay2).callFunction(() => {colorReset();empty();})
+                        .deleteAll(1).pauseFor(typerDelay3).callFunction(() => {reset();})
+                        .typeString('Programmer')
+                        .pauseFor(typerDelay1).callFunction(() => {colorSelect();})
+                        .pauseFor(typerDelay2).callFunction(() => {colorReset();empty();})
+                        .deleteAll(1).pauseFor(typerDelay3).callFunction(() => {reset();})
+                        .typeString('Voice Actor in training')
+                        .pauseFor(typerDelay1).callFunction(() => {colorSelect();})
+                        .pauseFor(typerDelay2).callFunction(() => {colorReset();empty();})
+                        .deleteAll(1).pauseFor(typerDelay3).callFunction(() => {reset();})
+                        .start();
+                    //console.log("NEW CODE: " + isNew);
+                });
+            </script>
+        </div>
+        <div class="heroShelf">
+            <a href="/work">
+                <div class="shelfTitle">
+                    <span class="shelfTitleText">Projects</span>
+                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                </div>
+            </a>
+            <div class="imgShelf">
+                {projects.map((item: any) => <a href={`${item.link}`} target="_blank"><img src={`/img/projects/${item.img}`} alt={item.name}></img></a>)}
+            </div>
+        </div>
+        <div class="heroShelf">
+            <div class="shelfTitle">
+                <span class="shelfTitleText">Find me on</span>
+            </div>
+            <div class="imgShelf">
+                {socmed.map((item: any) => <a href={`${item.link}`} target="_blank"><img src={`/img/socmed/${item.img}`} alt={item.name}></img></a>)}
+            </div>
+        </div>
+        <img id="bg_chara" src="/img/bg_chara.webp" alt="bg_chara"/>
+    </div>
+</BaseLayout>

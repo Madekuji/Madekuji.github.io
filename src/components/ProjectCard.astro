@@ -1,0 +1,15 @@
+---
+const { link, img, name, description } = Astro.props
+---
+<a href={`${link}`} target="_blank">
+    <div class="projectCard">
+        <div>
+            <img src={`/img/projects/${img}`} alt={`${name}`}></img>
+        </div>
+        <div class="projectCardInfo">
+            <h2>{name}</h2>
+            <p>{description}</p>
+            <!--<p dangerouslySetInnerHTML={{ __html: description }}></p>-->
+        </div>
+    </div>
+</a>
