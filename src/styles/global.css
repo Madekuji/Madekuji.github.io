@@ -415,6 +415,16 @@ nav a:hover span{
     #projectList a{
         width: 100%;
     }
+    #navbarNav {
+        gap: 2rem;
+    }
+    #navbarNav a {
+        /*flex-direction: column;*/
+        /*width: auto;*/
+        width: 1.5rem;
+        gap: 0.25rem;
+        font-size: 1rem;
+    }
 }
 
 /* iOS Safari modifications */
