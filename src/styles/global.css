@@ -134,6 +134,9 @@ body{
 #navbarLogoImg {
     height: 3rem;
     width: auto;
+    transition: width 100ms, height 100ms;
+    object-fit: cover;
+    object-position: top left;
 }
 #navbarBG {
     z-index: 1;
@@ -427,6 +430,24 @@ nav a:hover span{
     }
 }
 
+@media only screen and (max-width: 800px) {
+    #navbarLogoImg {
+        height: 1.8rem;
+    }
+    #navbar a {
+        width: 1rem;
+    }
+    .navbarNavText {
+        font-size: 0.75rem;
+    }
+    #navbarNav .material-symbols-outlined {
+        font-size: 1.25rem;
+    }
+    .navbarNavSeparator {
+        font-size: 1.25rem;
+    }
+}
+
 /* iOS Safari modifications */
 /*@supports (-webkit-touch-callout: none) {
   @media screen and (max-width: 600px) {
@@ -485,6 +506,39 @@ nav a:hover span{
     #navbarLogoImg {
         width: 100%;
         height: auto;
+    }
+    #navbar a {
+        width: 1.5rem;
+    }
+    .navbarNavText {
+        font-size: 1rem;
+    }
+    #navbarNav .material-symbols-outlined {
+        font-size: 1.5rem;
+    }
+    .navbarNavSeparator {
+        font-size: 1.5rem;
+    }
+    /*.navbarNavSeparator {
+        display: none;
+    }*/
+
+    #navbar.navbarMobile {
+        .navbarNavText, .navbarNavSeparator{
+            font-size: 0;
+            width: 0;
+            display: none;
+            opacity: 0;
+            transition: opacity 200ms, display 200ms;
+        }
+        #navbarLogoImg {
+            width: 2rem;
+            height: 2rem;
+
+        }
+        #navbarContent {
+            justify-content: space-between;
+        }
     }
     .projectCard {
         flex-direction: column;

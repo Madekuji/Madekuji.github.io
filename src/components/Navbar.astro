@@ -2,20 +2,24 @@
 ---
 <script>
     document.addEventListener("astro:page-load", () => {
-    const nav = document.getElementById('navbarBG');
-    if (nav !== null) {
-        window.onscroll = function () {
-            //console.log(scrollY);
-            if (scrollY >= 100 ) {
-                nav.classList.add("nav-colored");
-                nav.classList.remove("nav-transparent");
-            }
-            else {
-                nav.classList.add("nav-transparent");
-                nav.classList.remove("nav-colored");
-            }
-        };
-    }});
+        const nav = document.getElementById('navbarBG');
+        const navBar = document.getElementById('navbar');
+
+        if (nav !== null && navBar !== null) {
+            window.onscroll = function () {
+                //console.log(scrollY);
+                if (scrollY >= 100 ) {
+                    nav.classList.add("nav-colored");
+                    nav.classList.remove("nav-transparent");
+                    navBar.classList.add("navbarMobile");
+                }
+                else {
+                    nav.classList.add("nav-transparent");
+                    nav.classList.remove("nav-colored");
+                    navBar.classList.remove("navbarMobile");
+                }
+            };
+        }});
 </script>
 <div id="navbar">
     <div id="navbarBG"/>
@@ -24,13 +28,13 @@
             <a href="/"><img id="navbarLogoImg" src="/img/logo.webp" height="48" width="335" alt="Madekuji Masamune"></img></a>
         </div>
         <nav id="navbarNav">
-            <a href="/"><span class="material-symbols-outlined">home</span> Home</a>
-            <span>  |  </span>
-            <a href="/work"><span class="material-symbols-outlined">work</span> Work</a>
-            <span>  |  </span>
-            <a href="/about"><span class="material-symbols-outlined">info</span> About</a>
+            <a href="/"><span class="material-symbols-outlined">home</span> <span class="navbarNavText">Home</span></a>
             <span class="navbarNavSeparator">  |  </span>
-            <a href="https://blog.mdkj.dev"><span class="material-symbols-outlined">history_edu</span> Blog</a>
+            <a href="/work"><span class="material-symbols-outlined">work</span> <span class="navbarNavText">Work</span></a>
+            <span class="navbarNavSeparator">  |  </span>
+            <a href="/about"><span class="material-symbols-outlined">info</span> <span class="navbarNavText">About</span></a>
+            <span class="navbarNavSeparator">  |  </span>
+            <a href="https://blog.mdkj.dev"><span class="material-symbols-outlined">history_edu</span> <span class="navbarNavText">Blog</span></a>
         </nav>
     </div>
 </div>
